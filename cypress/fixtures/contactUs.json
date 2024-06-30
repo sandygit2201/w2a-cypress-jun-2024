@@ -1,0 +1,30 @@
+{
+    "userDetails": {
+        "username": "",
+        "password": ""
+    },
+    "contactUsInfo": [
+        {
+            "name": "user1",
+            "email": "user1@gmail.com",
+            "subject": "contact us form through cypress",
+            "message": "india won t20 world cup",
+            "filePath": "cypress/fixtures/fileUploads/dummy.png",
+            "address":[{
+                "name":"user1",
+                "place":"Hyd"
+            }]
+        },
+        {
+            "name": "user2",
+            "email": "user2@gmail.com",
+            "subject": "contact us form through cypress",
+            "message": "india won t20 world cup",
+            "filePath": "cypress/fixtures/fileUploads/dummy.png",
+            "address":{
+                "name":"user1",
+                "place":"Hyd"
+            }
+        }
+    ]
+}

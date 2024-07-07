@@ -8,7 +8,7 @@ class HomePage {
   }
 
   navigateToCartPage() {
-    cy.get('[href="/view_cart"]').click();
+    cy.get('[href="/view_cart"]').filter(':visible').click();
   }
 
   navigateToLoginPage(){

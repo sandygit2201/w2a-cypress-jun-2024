@@ -17,7 +17,9 @@ describe("signup tests", () => {
     mobile: faker.phone.number(),
   };
 
-  it.skip("create user", () => {
+  it("create user", () => {
+
+    cy.writeFile('cypress/fixtures/userInfo.json',newUserInfo)
     // invoke app
     cy.visit("/");
     // navigate to login page
@@ -58,6 +60,8 @@ describe("signup tests", () => {
     cy.get('[data-qa="first_name"]').type(newUserInfo.firstName);
     cy.get('[data-qa="last_name"]').type(newUserInfo.lastName);
     cy.get('[data-qa="company"]').type(newUserInfo.company);
+
+    cy.writeToFile('cypress/e2e/fixtures/userAddress.json',newUserInfo)
 
     cy.get('[data-qa="address"]').type(newUserInfo.address1);
     cy.get('[data-qa="address2"]').type(newUserInfo.address2);

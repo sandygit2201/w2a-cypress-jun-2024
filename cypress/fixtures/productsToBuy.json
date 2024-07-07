@@ -1,0 +1,12 @@
+[
+    {
+        "product": "Winter Top",
+        "qty": 2,
+        "cost": 600
+    },
+    {
+        "product": "Summer White Top",
+        "qty": 3,
+        "cost": 400
+    }
+]

@@ -9,7 +9,7 @@ describe("tc-15", () => {
     cy.visit("/");
 
     let totalPurchaseCost = 0;
-    cy.viewport("macbook-16");
+    // cy.viewport("macbook-16");
     homePage.navigateToLoginPage();
     loginPage.LoginAsValidUser();
     homePage.navigateToProductsPage();
@@ -31,22 +31,15 @@ describe("tc-15", () => {
       productsPurchased.forEach((product) => {
         cartPage.verifyProductInCart(product);
       });
+    });
 
-      cartPage.proceedToCheckout()
+    cartPage.proceedToCheckout();
 
-      
-      cy.fixture('userInfo').then(userData=>{
-
-        let address = {
-          "name": userData['firstName'] + ' ' + userData['lastName'],
-
-        }
-
-        checkoutPage.verifyAddress(address)
-        
-
-      })
-
+    cy.fixture("userInfo").then((userData) => {
+      let address = {
+        name: userData["firstName"] + " " + userData["lastName"],
+      };
+      checkoutPage.verifyAddress(address);
     });
   });
 });

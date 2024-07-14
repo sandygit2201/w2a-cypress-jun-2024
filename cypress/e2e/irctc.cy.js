@@ -1,6 +1,6 @@
 describe('irctc',()=>{
 
-    it("irct",()=>{
+    it("irctc",()=>{
         cy.viewport('macbook-16')
         cy.visit("https://www.irctc.co.in/")
         cy.wait(2000)

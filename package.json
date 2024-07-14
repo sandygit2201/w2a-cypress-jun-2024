@@ -5,7 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "npx cypress open --e2e -b chrome"
+    "test-qa": "NODE_ENV=qa npx cypress run --spec=cypress/e2e/api/checkEnv.cy.js",
+    "test-dev": "NODE_ENV=dev npx cypress run --spec=cypress/e2e/api/checkEnv.cy.js"
   },
   "author": "",
   "license": "ISC",
@@ -14,6 +15,7 @@
     "cypress": "^13.10.0"
   },
   "dependencies": {
-    "dotenv": "^16.4.5"
+    "dotenv": "^16.4.5",
+    "rgb-hex": "^4.1.0"
   }
 }

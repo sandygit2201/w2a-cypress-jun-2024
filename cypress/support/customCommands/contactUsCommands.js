@@ -11,3 +11,14 @@ Cypress.Commands.add("fillContactUsForm",(formData)=>{
       });
 
 })
+
+
+Cypress.Commands.add('loginAndSaveSession', (user, pwd) => {
+  cy.session([user, pwd], () => {
+    cy.visit('/')
+    cy.get('input[name="username"]').type(user)
+    cy.get('input[name="password"]').type(pwd)
+    cy.get('button[type="submit"]').click()
+    cy.contains('Time at Work').should('be.visible')
+  })
+})

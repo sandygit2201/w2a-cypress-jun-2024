@@ -7,6 +7,7 @@ import * as fs from "fs";
 let myUniqueId;
 export default defineConfig({
   e2e: {
+    projectId: "q2tniq",
     baseUrl: process.env.BASEURL,
     setupNodeEvents(on, config) {
       // implement node event listeners here

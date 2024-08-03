@@ -4,6 +4,8 @@ describe("compare ui and api response",()=>{
 
         cy.request("https://reqres.in/api/users/2").as("userInfo")
 
+        cy.intercept("https://reqres.in/api/users/2").as("@userData")
+
         cy.visit("https://reqres.in/")
         cy.get("[data-id='users-single']").click()
         cy.wait(2000)

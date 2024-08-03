@@ -7,7 +7,12 @@
   "scripts": {
     "test-qa": "NODE_ENV=qa npx cypress run --spec=cypress/e2e/api/checkEnv.cy.js",
     "test-dev": "NODE_ENV=dev npx cypress run --spec=cypress/e2e/api/checkEnv.cy.js",
-    "checkbox-test": "npx cypress run --spec=cypress/e2e/heroku-app/checkbox.cy.js --record --key 011f6376-fc0b-43bf-a054-d0a2d5a1df5d"
+    "checkbox-test": "npx cypress run --spec=cypress/e2e/heroku-app/checkbox.cy.js --record --key 011f6376-fc0b-43bf-a054-d0a2d5a1df5d",
+    "parallel": "npx cypress run --spec=cypress/e2e/heroku-app/*.cy.js --parallel",
+    "cy:run": "npx cypress run", 
+    "cy:api": "npx cypress run", 
+    "cy:parallel" : "cypress-parallel -s -t 2 cy:api  -d cypress/e2e/heroku-app/ "
+
 
   },
   "author": "",
@@ -18,6 +23,7 @@
   },
   "dependencies": {
     "ajv": "^8.17.1",
+    "cypress-parallel": "^0.14.0",
     "dotenv": "^16.4.5",
     "rgb-hex": "^4.1.0"
   }

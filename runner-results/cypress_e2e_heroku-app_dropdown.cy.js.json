@@ -1,0 +1,10 @@
+{
+  "suites": 1,
+  "tests": 1,
+  "passes": 0,
+  "pending": 0,
+  "failures": 1,
+  "start": "2024-08-03T03:42:06.955Z",
+  "duration": 9848,
+  "file": "cypress/e2e/heroku-app/dropdown.cy.js"
+}

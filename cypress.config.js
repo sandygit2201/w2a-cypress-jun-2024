@@ -32,6 +32,7 @@ export default defineConfig({
     },
     watchForFileChanges: false,
     screenshotOnRunFailure: true,
+    video:true,
     env: {
       adminURL: "https://google.com",
       userName: process.env.USERNAME,

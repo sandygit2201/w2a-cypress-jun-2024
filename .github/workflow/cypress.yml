@@ -38,7 +38,7 @@ jobs:
           # No need for 'start' or 'wait-on'
           browser: chrome
           record: true 
-          group: 'e2e-tests' 
+          command: npm run checkbox-test
         env:
           CYPRESS_RECORD_KEY: 011f6376-fc0b-43bf-a054-d0a2d5a1df5d
           # Creating a token https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
